@@ -9,7 +9,7 @@
     "build": "tsc --build tsconfig.json",
     "serve": "nodemon",
     "lint": "eslint",
-    "devstart": "ts-node src/main.ts"
+    "devstart": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
