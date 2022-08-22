@@ -1,7 +1,21 @@
 # typepipe
 ## General
 A pipe function with typescript typing.
+## Usage Example
+```ts
+const add2 = (x: number): number => x + 2;
+const nrToStr = (x: number): string => x.toString();
+const strToObj = (x: string): {t: string} => ({t: x});
 
+const add2ToStrToObj = pipe(
+    add2,
+    nrToStr,
+    strToObj,
+);
+
+console.log(add2ToStrToObj(10));
+// -> {t: '12'}
+```
 
 ## Development
 ### First steps
