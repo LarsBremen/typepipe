@@ -1,7 +1,7 @@
 {
   "name": "typepipe",
   "version": "1.0.0",
-  "description": "",
+  "description": "A pipe function with typescript typing.",
   "main": "main.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --require ts-node/register ./spec/*.spec.ts",
