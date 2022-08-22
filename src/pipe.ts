@@ -1,27 +1,26 @@
 type opFunction<T, A> = (p: T) => A;
-type Res<T> = T;
 
 export function pipe<A, T>(
     op1: opFunction<T, A>,
-) : (y: T) => Res<A>;
+) : (y: T) => A;
 
 export function pipe<A, B, T>(
     op1: opFunction<T, A>,
     op2: opFunction<A, B>,
-) : (y: T) => Res<B>;
+) : (y: T) => B;
 
 export function pipe<A, B, C, T>(
     op1: opFunction<T, A>,
     op2: opFunction<A, B>,
     op3: opFunction<B, C>,
-) : (y: T) => Res<C>;
+) : (y: T) => C;
 
 export function pipe<A, B, C, D, T>(
     op1: opFunction<T, A>,
     op2: opFunction<A, B>,
     op3: opFunction<B, C>,
     op4: opFunction<C, D>,
-) : (y: T) => Res<D>;
+) : (y: T) => D;
 
 export function pipe<A, B, C, D, E, T>(
     op1: opFunction<T, A>,
@@ -29,7 +28,7 @@ export function pipe<A, B, C, D, E, T>(
     op3: opFunction<B, C>,
     op4: opFunction<C, D>,
     op5: opFunction<D, E>,
-) : (y: T) => Res<E>;
+) : (y: T) => E;
 
 export function pipe<A, B, C, D, E, F, T>(
     op1: opFunction<T, A>,
@@ -38,7 +37,7 @@ export function pipe<A, B, C, D, E, F, T>(
     op4: opFunction<C, D>,
     op5: opFunction<D, E>,
     op6: opFunction<E, F>,
-) : (y: T) => Res<F>;
+) : (y: T) => F;
 
 export function pipe<A, B, C, D, E, F, G, T>(
     op1: opFunction<T, A>,
@@ -48,7 +47,7 @@ export function pipe<A, B, C, D, E, F, G, T>(
     op5: opFunction<D, E>,
     op6: opFunction<E, F>,
     op7: opFunction<F, G>,
-) : (y: T) => Res<G>;
+) : (y: T) => G;
 
 export function pipe<A, B, C, D, E, F, G, H, T>(
     op1: opFunction<T, A>,
@@ -59,7 +58,7 @@ export function pipe<A, B, C, D, E, F, G, H, T>(
     op6: opFunction<E, F>,
     op7: opFunction<F, G>,
     op8: opFunction<G, H>,
-) : (y: T) => Res<H>;
+) : (y: T) => H;
 
 export function pipe<A, B, C, D, E, F, G, H, I, T>(
     op1: opFunction<T, A>,
@@ -71,7 +70,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, T>(
     op7: opFunction<F, G>,
     op8: opFunction<G, H>,
     op9: opFunction<H, I>,
-) : (y: T) => Res<I>;
+) : (y: T) => I;
 
 export function pipe<A, B, C, D, E, F, G, H, I, J, T>(
     op1: opFunction<T, A>,
@@ -84,7 +83,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, T>(
     op8: opFunction<G, H>,
     op9: opFunction<H, I>,
     op10: opFunction<I, J>,
-) : (y: T) => Res<J>;
+) : (y: T) => J;
 
 
 /**
@@ -111,6 +110,6 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, T>(
  * // -> {t: '12'}
  * ```
  */
-export function pipe(...fns: opFunction<any, any>[]): Res<any> {
+export function pipe(...fns: opFunction<any, any>[]): any {
   return (y: any) => fns.reduce((x, f) => f(x), y);
 }
