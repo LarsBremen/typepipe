@@ -7,47 +7,47 @@ export function pipe<A, T>(
 
 export function pipe<A, B, T>(
     op1: opFunction<T, A>,
-    op2: opFunction<T, B>,
+    op2: opFunction<A, B>,
 ) : (y: T) => Res<B>;
 
 export function pipe<A, B, C, T>(
     op1: opFunction<T, A>,
-    op2: opFunction<T, B>,
-    op3: opFunction<T, C>,
+    op2: opFunction<A, B>,
+    op3: opFunction<B, C>,
 ) : (y: T) => Res<C>;
 
 export function pipe<A, B, C, D, T>(
     op1: opFunction<T, A>,
-    op2: opFunction<T, B>,
-    op3: opFunction<T, C>,
-    op4: opFunction<T, D>,
+    op2: opFunction<A, B>,
+    op3: opFunction<B, C>,
+    op4: opFunction<C, D>,
 ) : (y: T) => Res<D>;
 
 export function pipe<A, B, C, D, E, T>(
     op1: opFunction<T, A>,
-    op2: opFunction<T, B>,
-    op3: opFunction<T, C>,
-    op4: opFunction<T, D>,
-    op5: opFunction<T, E>,
+    op2: opFunction<A, B>,
+    op3: opFunction<B, C>,
+    op4: opFunction<C, D>,
+    op5: opFunction<D, E>,
 ) : (y: T) => Res<E>;
 
 export function pipe<A, B, C, D, E, F, T>(
     op1: opFunction<T, A>,
-    op2: opFunction<T, B>,
-    op3: opFunction<T, C>,
-    op4: opFunction<T, D>,
-    op5: opFunction<T, E>,
-    op6: opFunction<T, F>,
+    op2: opFunction<A, B>,
+    op3: opFunction<B, C>,
+    op4: opFunction<C, D>,
+    op5: opFunction<D, E>,
+    op6: opFunction<E, F>,
 ) : (y: T) => Res<F>;
 
 export function pipe<A, B, C, D, E, F, G, T>(
     op1: opFunction<T, A>,
-    op2: opFunction<T, B>,
-    op3: opFunction<T, C>,
-    op4: opFunction<T, D>,
-    op5: opFunction<T, E>,
-    op6: opFunction<T, F>,
-    op7: opFunction<T, G>,
+    op2: opFunction<A, B>,
+    op3: opFunction<B, C>,
+    op4: opFunction<C, D>,
+    op5: opFunction<D, E>,
+    op6: opFunction<E, F>,
+    op7: opFunction<F, G>,
 ) : (y: T) => Res<G>;
 
 /**
