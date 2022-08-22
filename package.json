@@ -1,5 +1,5 @@
 {
-  "name": "template_node_ts",
+  "name": "typepipe",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LarsBremen/template_node_ts.git"
+    "url": "git+https://github.com/LarsBremen/typepipe.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LarsBremen/template_node_ts/issues"
+    "url": "https://github.com/LarsBremen/typepipe/issues"
   },
-  "homepage": "https://github.com/LarsBremen/template_node_ts#readme",
+  "homepage": "https://github.com/LarsBremen/typepipe#readme",
   "dependencies": {
     "typescript": "^4.7.4"
   },
