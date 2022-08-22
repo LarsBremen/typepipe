@@ -61,15 +61,17 @@ export function pipe<A, B, C, D, E, F, G, T>(
  * @example
  * ```ts
  * const add2 = (x: number): number => x + 2;
- * const nrToStr = (x: number): String => x.toString();
+ * const nrToStr = (x: number): string => x.toString();
+ * const strToObj = (x: string): {t: string} => ({t: x});
  *
- * const add2ToStr = pipe(
- *  add2,
- *  nrToStr,
+ * const add2ToStrToObj = pipe(
+ *     add2,
+ *     nrToStr,
+ *     strToObj,
  * );
  *
- * console.log(add2ToStr(10));
- * // -> '12'
+ * console.log(add2ToStrToObj(10));
+ * // -> {t: '12'}
  * ```
  */
 export function pipe(...fns: opFunction<any, any>[]): Res<any> {
