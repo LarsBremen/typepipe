@@ -16,7 +16,12 @@ export function pipe<A, B, C, T>(
     op3: opFunction<T, C>,
 ) : (y: T) => Res<C>;
 
-// eslint-disable-next-line require-jsdoc
+/**
+ * Pipe receives n functions as parameters and returns a function that receives
+ * one parameter. The given parameter is passed to the first function and
+ * the result of this is passed on to the next function. This gets repeated
+ * until the result of the last function is returned.
+ */
 export function pipe(...fns: opFunction<any, any>[]): Res<any> {
   return (y: any) => fns.reduce((x, f) => f(x), y);
 }
