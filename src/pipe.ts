@@ -66,9 +66,9 @@ export function pipe<A, B, C, D, E, F, G, T>(
  * const add2ToStr = pipe(
  *  add2,
  *  nrToStr,
- * )
+ * );
  *
- * console.log(add2ToStr(10);
+ * console.log(add2ToStr(10));
  * // -> '12'
  * ```
  */
