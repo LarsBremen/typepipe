@@ -1,0 +1,40 @@
+{
+  "name": "template_node_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require ts-node/register ./spec/*.spec.ts",
+    "start": "node ./out/main.js",
+    "build": "tsc --build tsconfig.json",
+    "serve": "nodemon",
+    "lint": "eslint",
+    "devstart": "ts-node src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LarsBremen/template_node_ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LarsBremen/template_node_ts/issues"
+  },
+  "homepage": "https://github.com/LarsBremen/template_node_ts#readme",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.9",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.22.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1"
+  }
+}
