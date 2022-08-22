@@ -1,4 +1,4 @@
-type opFunction<T, A> = (p: T) => A;
+type opFunction<X, Y> = (p: X) => Y;
 
 export function pipe<A, T>(
     op1: opFunction<T, A>,
