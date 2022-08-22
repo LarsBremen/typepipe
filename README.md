@@ -1,7 +1,7 @@
 # typepipe
 ## General
 A pipe function with typescript typing.
-## Usage Example
+### Usage Example
 ```ts
 const add2 = (x: number): number => x + 2;
 const nrToStr = (x: number): string => x.toString();
