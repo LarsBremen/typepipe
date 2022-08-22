@@ -16,6 +16,40 @@ export function pipe<A, B, C, T>(
     op3: opFunction<T, C>,
 ) : (y: T) => Res<C>;
 
+export function pipe<A, B, C, D, T>(
+    op1: opFunction<T, A>,
+    op2: opFunction<T, B>,
+    op3: opFunction<T, C>,
+    op4: opFunction<T, D>,
+) : (y: T) => Res<D>;
+
+export function pipe<A, B, C, D, E, T>(
+    op1: opFunction<T, A>,
+    op2: opFunction<T, B>,
+    op3: opFunction<T, C>,
+    op4: opFunction<T, D>,
+    op5: opFunction<T, E>,
+) : (y: T) => Res<E>;
+
+export function pipe<A, B, C, D, E, F, T>(
+    op1: opFunction<T, A>,
+    op2: opFunction<T, B>,
+    op3: opFunction<T, C>,
+    op4: opFunction<T, D>,
+    op5: opFunction<T, E>,
+    op6: opFunction<T, F>,
+) : (y: T) => Res<F>;
+
+export function pipe<A, B, C, D, E, F, G, T>(
+    op1: opFunction<T, A>,
+    op2: opFunction<T, B>,
+    op3: opFunction<T, C>,
+    op4: opFunction<T, D>,
+    op5: opFunction<T, E>,
+    op6: opFunction<T, F>,
+    op7: opFunction<T, G>,
+) : (y: T) => Res<G>;
+
 /**
  * Pipe receives n functions as parameters and returns a function that receives
  * one parameter. The given parameter is passed to the first function and
